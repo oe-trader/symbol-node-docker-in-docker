@@ -1,0 +1,7 @@
+nodes:
+    - friendlyName: "dind-node1"
+      host: ""
+      minFeeMultiplier: 10
+      transactionSelectionStrategy: oldest
+maxUnlockedAccounts: 100
+beneficiaryAddress: ""

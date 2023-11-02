@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+    symbol-node:
+        build: .
+        env_file:
+            - shared/.env
+        command: /bin/bash -c "chmod +x /symbol/setup-symbol-node.sh && /symbol/setup-symbol-node.sh && echo symbol-bootstrap start -d -a ${ASSEMBLY} -p ${NETWORK_TYPE} -c ${PRESET_FILE}"
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - ./shared:/symbol
